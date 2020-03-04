@@ -1,4 +1,19 @@
 .ans {
     background-color: aqua;
+    display: block;
+    margin-top: 100px;
+    padding: 20px;
+    text-align: center;
+}
+#submit {
     
+    
+}
+body {
+    background-color: rgb(27, 230, 88);
+}
+body div h3 {
+    color: rgb(192, 100, 15);
+    text-align: center;
+    margin-top: 80px;
 }
