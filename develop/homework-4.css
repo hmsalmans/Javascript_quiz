@@ -1,14 +1,15 @@
 .ans {
     background-color: aqua;
     display: block;
-    margin-top: 100px;
+    margin-top: 80px;
     padding: 20px;
     text-align: center;
 }
-#submit {
-    color: rgb(0, 139, 104);
-    background-color: darkslateblue;
-    
+#next {
+    color: rgb(0, 21, 139);
+    background-color: rgb(61, 139, 100);
+    border-radius: 25%;
+    text-align: center;
 }
 body {
     background-color: rgb(19, 159, 224);
@@ -25,4 +26,13 @@ body {
     margin-top: 20px;
     text-align: center;
     color: rgb(209, 0, 0);
+}
+#start {
+    text-align: center;
+    margin-top: 20px;
+    padding-top: 20px;
+    
+}
+#welcome {
+    color: orangered;
 }

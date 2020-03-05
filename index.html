@@ -5,6 +5,9 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Javascript Quiz </title>
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
     <link rel="stylesheet"   type="text/css" href="develop/homework-4.css"> 
 </head>
 <body>
@@ -15,71 +18,52 @@
                 <div id="right"><em>Wrong</em>:&nbsp;<span id="notCorrect">000</span></div>
                 &nbsp; &nbsp; <h4 id="score"><em>Score</em></h4>
             </div>   
-            
-            
-
-
-
-            <div class="col-lg-6" id="quiz">
-                <div class="row">
+            <div class="col-lg-6">
+                <div class="row" id="start">
                     <div class="col-lg-12">
+                        <h3 id="welcome">WELCOME TO THE JAVASCRIPT QUIZ</h3>
+                        <p>You have 90 seconds to answer 4 questions. If you answer a question wrong, you will loose 10 seconds. Please click on the start button to continue. GOODLUCK! </p>
+                        <button class="btn btn-success">Start</button>
+                    </div>
+                </div>
+                <div class="row quiz">
+                    <div class="col-lg-12">
+                        
                 <h3 id="spe"><em>Please click on the right answer.</em></h3>
                     </div>
                 </div>
-                <div class="row ans">
+                <div class="row ans quiz">
                     <div class="col-lg-12">
-                        
-                        <p id="quest">hjagchjkaghdajklshdjaskldhjakldjaklbnkjhdjkhajkdhkjhkjhjkdhnbdd
-                                jhdjshdasdas
-                                kdjhjdhsjkd
+                        <p id="quest">
                         </p>
                         <div>
-                                <button id="ans1" class="btn btn-primary">hjgsdhjsgddsjghfsjh</button>
-                                &nbsp; &nbsp;
-                                <button id="ans2" class="btn btn-primary">jhdgchjadgcf</button><br><br>
-                                <button id="ans3" class="btn btn-primary">ashjgnchjasdgbajhdgasjhd</button>
-                                &nbsp; &nbsp;
-                                <button id="ans4" class="btn btn-primary">jhsagbjhagdbajhdgb</button>
+                            <button id="ans1" class="btn btn-primary"></button>
+                            &nbsp; &nbsp;
+                            <button id="ans2" class="btn btn-primary"></button><br><br>
+                            <button id="ans3" class="btn btn-primary"></button>
+                            &nbsp; &nbsp;
+                            <button id="ans4" class="btn btn-primary"></button>
                         </div>
                     </div>    
                 </div>    
-            
-
                 <br><br>
-
-
-
-                
-                <div class="row">
+                <div class="row quiz">
                     <div class="col-lg-12">
                         <div>    
-                            <button class="btn btn-info" id="submit">Get Results</button>
-                        </div>
-                        <div id="results">
+                        <button class="btn btn-info" id="next">Next</button>
                         </div>    
                     </div>    
                 </div>  
             </div>
-            
-
-
-
-
-
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-lg-12">
-                        <p>Time</p>
+                        <p><em>Time</em></p>
                     </div>
                 </div>    
             </div>
-
-
         </div>    
     </container>
-
-    
-    
     <script type="text/javascript" src="develop/homework-4.js"></script>
 </body>
 </html>
