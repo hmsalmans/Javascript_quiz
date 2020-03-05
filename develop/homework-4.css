@@ -6,14 +6,23 @@
     text-align: center;
 }
 #submit {
-    
+    color: rgb(0, 139, 104);
+    background-color: darkslateblue;
     
 }
 body {
-    background-color: rgb(27, 230, 88);
+    background-color: rgb(19, 159, 224);
 }
-body div h3 {
-    color: rgb(192, 100, 15);
+#spe {
+    color: rgb(146, 4, 127);
     text-align: center;
-    margin-top: 80px;
+    margin-top: 40px;
+    padding-top: 60px;
+
+    
+}
+.col-lg-3 {
+    margin-top: 20px;
+    text-align: center;
+    color: rgb(209, 0, 0);
 }
