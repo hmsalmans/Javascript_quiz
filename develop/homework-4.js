@@ -2,6 +2,7 @@
 var i = 0;
 var correct = 0;
 var wrong  = 0;
+var answer;
 
 
 var myQuestions = [
@@ -53,26 +54,29 @@ $(document).ready(function() {
     
 });
 
-
-
+$(".start").on("click", function(){
+    $(".quiz").show();
+    $("#startdiv").hide()
+    reRender(); 
+});
 
 
     function reRender() {
-        $(".quiz").show();
-        $("#quest").html(myQuestions[i].question);
-        $("#ans1").html(myQuestions[i].answers.a);
-        $("#ans2").html(myQuestions[i].answers.b);
-        $("#ans3").html(myQuestions[i].answers.c);
-        $("#ans4").html(myQuestions[i].answers.d);
+        
+      answer =  $("#quest").html(myQuestions[i].question) 
+        $("#ans1").html(myQuestions[i].answers.a)
+        $("#ans2").html(myQuestions[i].answers.b)
+        $("#ans3").html(myQuestions[i].answers.c)
+        $("#ans4").html(myQuestions[i].answers.d)
     i++;
     };
+
 $("#next").on("click", function() {
-
-
-
 
   reRender();
 });
+
+
 
 /*
   function reRender() {
