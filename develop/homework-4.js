@@ -78,10 +78,10 @@ $(".start").on("click", function(){
     function reRender() {
         
         $("#quest").html(myQuestions[i].question) 
-              $("#ans1").html(myQuestions[i].answers.a).attr("corrected", 0 === myQuestions[i].correctAnswer);
-              $("#ans2").html(myQuestions[i].answers.b).attr("corrected", 1 === myQuestions[i].correctAnswer);
-              $("#ans3").html(myQuestions[i].answers.c).attr("corrected", 2 === myQuestions[i].correctAnswer);
-              $("#ans4").html(myQuestions[i].answers.d).attr("corrected", 3 === myQuestions[i].correctAnswer); 
+              $("#ans1").html(myQuestions[i].answers.a).attr("corrected" === myQuestions[i].correctAnswer);
+              $("#ans2").html(myQuestions[i].answers.b).attr("corrected" === myQuestions[i].correctAnswer);
+              $("#ans3").html(myQuestions[i].answers.c).attr("corrected" === myQuestions[i].correctAnswer);
+              $("#ans4").html(myQuestions[i].answers.d).attr("corrected" === myQuestions[i].correctAnswer); 
     i++;
     };
 
