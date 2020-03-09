@@ -23,7 +23,7 @@ Only one HTML file is used with blank elements and a dynamic approach is used to
 
 
 # Display Demo:
-![ ](develop/Dynamic-Quiz)
+![ ](develop/Dynamic-Quiz.png)
 
 
 # Deployed application link :
