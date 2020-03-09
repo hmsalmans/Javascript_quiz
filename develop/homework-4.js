@@ -1,10 +1,10 @@
-
+// needed variables are defined
 var i = 0;
 var correct = 0;
 var wrong  = 0;
 var answer;
 
-
+//  obects has certain properties and some of them are arrays.
 var myQuestions = [
     {
         question: "The computer language that makes the pages live is called?",
@@ -49,30 +49,32 @@ var myQuestions = [
 
 ];
 
+// HTML is made dynamic.
+
 $(document).ready(function() {
     
     reRender();
 
-    $(".quiz").hide();
+    $(".quiz").hide(); // hides the div which becomes visible when start button is clicked
 
     
         
     
     $(".btn-primary").click(function(event){
-    
-
+    $("#ans4").html(myQuestions[i].answers[3]) // what is happening here Lada?
     var clicked = $(this);
     var isAnswerCorrect = clicked.attr("correctAnswer");
     if (isAnswerCorrect === "true" ) {
+        
 
-        correct++;
+        correct++; // adds to correct answer if chosen correct answer
         $("#correct").text(correct);
         
     }
     else { 
-        wrong++
-        $("#notCorrect").text(wrong)
-    }
+        wrong++ // adds to wrong answer count is answer chosen is wrong
+        $("#notCorrect").text(wrong);
+    };
     i++;
     reRender();
     
@@ -83,14 +85,14 @@ $(document).ready(function() {
 
 $(".start").on("click", function(){
     $(".quiz").show();
-    $("#startdiv").hide()
+    $("#startdiv").hide() // when clicked start button, this start div is hid and question/answer div is generated
     
 });
 
 
 
 
-
+// this function renders all quetstions and answers relevent to them to the appropriate elements and divs. 
 function reRender() {
         
                 $("#quest").html(myQuestions[i].question); 
@@ -100,72 +102,3 @@ function reRender() {
                 $("#ans4").html(myQuestions[i].answers[3]).attr("correctAnswer", 3 === myQuestions[i].correctAnswer); 
     
             };
-
-
-
-/*
-  function reRender() {
-    $(“#questions”).html(questions[i].question);
-    $(“#btn1”).html(questions[i].answer[0]).attr(“correct”, 0 === questions[i].correct);
-    $(“#btn2”).html(questions[i].answer[1]).attr(“correct”, 1 === questions[i].correct);
-    $(“#btn3”).html(questions[i].answer[2]).attr(“correct”, 2 === questions[i].correct);
-  }
-$(document).ready(function() {
-  reRender();
-  $(“.btn-lg”).click(function(event) {
-    var clickedElement = $(this);
-    var isAnswerCorrect = clickedElement.attr(“correct”);
-    if(isAnswerCorrect === “true”) {
-      correctAnswer = correctAnswer + 1; //correctAnswer += 1; correctAnswer++;
-    } else {
-      inCorrect++;
-    }
-    i++;
-    reRender();
-  });
-});
-
-
-var i = 0;
-var correctAnswer = 0;
-var inCorrect = 0;
-var questions = [
-  {
-      question: “What does HTML stand for?“,
-      answer: [
-        “Home Tool Masrkup Language”,
-        “Hyper Text Markup Language”,
-        “Hyperlink and Text Markup Language”,
-      ],
-      correct: 1
-    }, {
-      question: “Questin number 2?“,
-      answer:[
-        “Answer 1”,
-        “Answer 2",
-        “Answer 3”,
-      ],
-      correct: 2
-    }
-  ];
-
-  function reRender() {
-    $(“#questions”).html(questions[i].question);
-    $(“#btn1”).html(questions[i].answer[0]).attr(“correct”, 0 === questions[i].correct);
-    $(“#btn2”).html(questions[i].answer[1]).attr(“correct”, 1 === questions[i].correct);
-    $(“#btn3”).html(questions[i].answer[2]).attr(“correct”, 2 === questions[i].correct);
-  }
-$(document).ready(function() {
-  reRender();
-  $(“.btn-lg”).click(function(event) {
-    var clickedElement = $(this);
-    var isAnswerCorrect = clickedElement.attr(“correct”);
-    if(isAnswerCorrect === “true”) {
-      correctAnswer = correctAnswer + 1; //correctAnswer += 1; correctAnswer++;
-    } else {
-      inCorrect++;
-    }
-    i++;
-    reRender();
-  });
-});*/

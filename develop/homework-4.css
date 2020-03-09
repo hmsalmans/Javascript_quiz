@@ -2,7 +2,7 @@
     background-color:#d2bba0;
     display: block;
     margin-top: 80px;
-    padding: 20px;
+    padding: 20px;   /* propeties given to question answer div*/
     text-align: center;
 }
 #next {
@@ -12,7 +12,7 @@
     text-align: center;
 }
 body {
-    background-color: #ffeee2;
+    background-color: #ffeee2;/* propeties given to body div*/
 }
 #spe {
     color: rgb(146, 4, 127);
@@ -29,7 +29,7 @@ body {
 }
 #startdiv {
     text-align: center;
-    margin-top: 20px;
+    margin-top: 20px;/* propeties given to first page start div div*/
     padding-top: 20px;
     
 }
