@@ -3,6 +3,7 @@ var i = 0;
 var correct = 0;
 var wrong  = 0;
 var seconds = 91;
+var myTimer;
 var answer;
 
 
@@ -19,12 +20,12 @@ var myQuestions = [
         correctAnswer: 1
     },
     {
-        question: "How difficult is  javascript to a newbei like me?",
+        question: "How difficult is  to learn javascript for Salman?",
         answers: [
              "hard",
              "very hard",
              " I don't know",
-             "Just shut up and learn it! You be fine"
+             "He should just shut up and learn it. He will get it"
         ],
         correctAnswer: 3   
      },
@@ -54,9 +55,14 @@ var myQuestions = [
 // HTML is made dynamic.
 
 $(document).ready(function() {
-    
-    reRender();
 
+    
+
+
+    reRender();
+    
+    $("#hello").hide(); // certain dives are made hidden and show up during the application as needed.
+    $("#nobaby").hide();
     $(".quiz").hide(); // hides the div which becomes visible when start button is clicked
 
     
@@ -71,13 +77,19 @@ $(document).ready(function() {
 
         correct++; // adds to correct answer if chosen correct answer
         $("#correct").text(correct);
+        $("#hello").show();
+        setTimeout(hiding, 2000); // when answered correct, it gives correct alert and then disappears after two seconds.
         
     }
     else { 
         wrong++ // adds to wrong answer count is answer chosen is wrong
         $("#notCorrect").text(wrong);
         seconds -= 10;
+        $("#nobaby").show();
+        setTimeout(message, 4000); //if answered incorrectly, this message will show up then disappear after 4 seconds
+
     };
+    
     i++;
     reRender();
     
@@ -90,7 +102,10 @@ $(".start").on("click", function(){
     $(".quiz").show();
     $("#startdiv").hide() // when clicked start button, this start div is hid and question/answer div is generated
     
-        setInterval(starting, 1000)
+      var myTimer =  setInterval(starting, 1000);
+    
+     
+    
     
     
 });
@@ -106,6 +121,7 @@ function reRender() {
                 $("#ans2").html(myQuestions[i].answers[1]).attr("correctAnswer", 1 === myQuestions[i].correctAnswer);
                 $("#ans3").html(myQuestions[i].answers[2]).attr("correctAnswer", 2 === myQuestions[i].correctAnswer);
                 $("#ans4").html(myQuestions[i].answers[3]).attr("correctAnswer", 3 === myQuestions[i].correctAnswer); 
+                
     
             };
 
@@ -114,6 +130,17 @@ function reRender() {
 
             function starting(){
 
-                seconds--;
+                seconds--;  // countdown timer
                 $("#time").text(seconds)
             };
+
+            function message(){
+                $("#nobaby").hide(); // hides the alert after notifying the user that he answered incorrectly
+            };
+
+            function hiding(){
+                $("#hello").hide();
+
+            };
+
+            
