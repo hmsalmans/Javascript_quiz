@@ -2,9 +2,11 @@
 var i = 0;
 var correct = 0;
 var wrong  = 0;
+var seconds = 91;
 var answer;
 
-//  obects has certain properties and some of them are arrays.
+
+//  obect has certain properties and some of them are arrays.
 var myQuestions = [
     {
         question: "The computer language that makes the pages live is called?",
@@ -87,6 +89,9 @@ $(".start").on("click", function(){
     $(".quiz").show();
     $("#startdiv").hide() // when clicked start button, this start div is hid and question/answer div is generated
     
+        setInterval(starting, 1000)
+    
+    
 });
 
 
@@ -101,4 +106,13 @@ function reRender() {
                 $("#ans3").html(myQuestions[i].answers[2]).attr("correctAnswer", 2 === myQuestions[i].correctAnswer);
                 $("#ans4").html(myQuestions[i].answers[3]).attr("correctAnswer", 3 === myQuestions[i].correctAnswer); 
     
+            };
+
+
+            
+
+            function starting(){
+
+                seconds--;
+                $("#time").text(seconds)
             };

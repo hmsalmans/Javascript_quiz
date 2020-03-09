@@ -36,3 +36,14 @@ body {
 #welcome {
     color: orangered;
 }
+#time {
+    color:rgb(43, 174, 226);
+}
+#correct{
+    color:rgb(43, 174, 226);
+    
+}
+#notCorrect{
+    color:rgb(43, 174, 226);
+    
+}
