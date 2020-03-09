@@ -76,6 +76,7 @@ $(document).ready(function() {
     else { 
         wrong++ // adds to wrong answer count is answer chosen is wrong
         $("#notCorrect").text(wrong);
+        seconds -= 10;
     };
     i++;
     reRender();
