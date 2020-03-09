@@ -8,103 +8,100 @@ var answer;
 var myQuestions = [
     {
         question: "The computer language that makes the pages live is called?",
-        answers: {
-            a: "HTML",
-            b: "Javascript",
-            c: "CSS",
-            d: "None of the above"
-        },
-        correctAnswer: "b"
+        answers: [
+             "HTML",
+             "Javascript",
+             "CSS",
+             "None of the above"],
+        
+        correctAnswer: 1
     },
     {
         question: "How difficult is  javascript to a newbei like me?",
-        answers: {
-            a: "hard",
-            b: "very hard",
-            c: " I don't know",
-            d: "Just shut up and learn it! You be fine"
-        },
-        correctAnswer: "d"   
+        answers: [
+             "hard",
+             "very hard",
+             " I don't know",
+             "Just shut up and learn it! You be fine"
+        ],
+        correctAnswer: 3   
      },
      {
         question: "The library of javascript is?",
-        answers: {
-            a: "HTML",
-            b: "CSS",
-            c: "Jquery",
-            d: "None of the above"
-        },
-        correctAnswer: "c"
+        answers: [
+             "HTML",
+             "CSS",
+             "Jquery",
+             "None of the above"
+        ],
+        
+        correctAnswer: 2
     },
     {
         question: "When was javascript created?",
-        answers: {
-            a: "2005",
-            b: "1887",
-            c: " 1995",
-            d: "2016"
-        },
-        correctAnswer: "c"    }
+        answers: [
+            "2005",
+             "1887",
+             " 1995",
+             "2016"
+        ],
+        correctAnswer: 2    }
 
 ];
 
 $(document).ready(function() {
+    
+    reRender();
 
     $(".quiz").hide();
 
-    $("btn-primary").on("click", function(event){
     
-    })
-    var clicked = $(this);
-    var isAnswerCorrect = clicked.attr("corrected");
-    if (isAnswerCorrect === true ) {
+        
+    
+    $(".btn-primary").click(function(event){
+    
 
-        correct++
+    var clicked = $(this);
+    var isAnswerCorrect = clicked.attr("correctAnswer");
+    if (isAnswerCorrect === "true" ) {
+
+        correct++;
+        $("#correct").text(correct);
+        
     }
     else { 
         wrong++
+        $("#notCorrect").text(wrong)
     }
+    i++;
+    reRender();
     
     
+});
+
 });
 
 $(".start").on("click", function(){
     $(".quiz").show();
     $("#startdiv").hide()
-    reRender(); 
+    
 });
 
 
-    function reRender() {
+
+
+
+function reRender() {
         
-            $("#quest").html(myQuestions[i].question); 
-              $("#ans1").html(myQuestions[i].answers.a).attr("corrected", 0 === myQuestions[i].correctAnswer);
-              $("#ans2").html(myQuestions[i].answers.b).attr("corrected", 1 === myQuestions[i].correctAnswer);
-              $("#ans3").html(myQuestions[i].answers.c).attr("corrected", 2 === myQuestions[i].correctAnswer);
-              $("#ans4").html(myQuestions[i].answers.d).attr("corrected", 3 === myQuestions[i].correctAnswer); 
-    i++;
-    };
+                $("#quest").html(myQuestions[i].question); 
+                $("#ans1").html(myQuestions[i].answers[0]).attr("correctAnswer", 0 === myQuestions[i].correctAnswer);
+                $("#ans2").html(myQuestions[i].answers[1]).attr("correctAnswer", 1 === myQuestions[i].correctAnswer);
+                $("#ans3").html(myQuestions[i].answers[2]).attr("correctAnswer", 2 === myQuestions[i].correctAnswer);
+                $("#ans4").html(myQuestions[i].answers[3]).attr("correctAnswer", 3 === myQuestions[i].correctAnswer); 
+    
+            };
 
 
-
-
-
-
-
-$("#next").on("click", function() {
-
-    reRender();
-    $("#correct").html(correct);
-  });
-  
-
-
-
-
-
-
-
-  
 
 /*
   function reRender() {
