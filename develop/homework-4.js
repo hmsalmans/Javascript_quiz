@@ -69,7 +69,7 @@ $(document).ready(function() {
         
     
     $(".btn-primary").click(function(event){
-    $("#ans4").html(myQuestions[i].answers[3]) // what is happening here Lada?
+    $("#ans4").html(myQuestions[i].answers[3]);
     var clicked = $(this);
     var isAnswerCorrect = clicked.attr("correctAnswer");
     if (isAnswerCorrect === "true" ) {
@@ -89,8 +89,16 @@ $(document).ready(function() {
         setTimeout(message, 4000); //if answered incorrectly, this message will show up then disappear after 4 seconds
 
     };
+
+    
     
     i++;
+
+    if (
+        i === myQuestions.length) {
+            clearInterval(myTimer);
+        }
+
     reRender();
     
     
@@ -102,10 +110,7 @@ $(".start").on("click", function(){
     $(".quiz").show();
     $("#startdiv").hide() // when clicked start button, this start div is hid and question/answer div is generated
     
-      var myTimer =  setInterval(starting, 1000);
-    
-     
-    
+       myTimer =  setInterval(starting, 1000);
     
     
 });
@@ -115,14 +120,16 @@ $(".start").on("click", function(){
 
 // this function renders all quetstions and answers relevent to them to the appropriate elements and divs. 
 function reRender() {
+    if (i < myQuestions.length) {
         
                 $("#quest").html(myQuestions[i].question); 
                 $("#ans1").html(myQuestions[i].answers[0]).attr("correctAnswer", 0 === myQuestions[i].correctAnswer);
                 $("#ans2").html(myQuestions[i].answers[1]).attr("correctAnswer", 1 === myQuestions[i].correctAnswer);
                 $("#ans3").html(myQuestions[i].answers[2]).attr("correctAnswer", 2 === myQuestions[i].correctAnswer);
                 $("#ans4").html(myQuestions[i].answers[3]).attr("correctAnswer", 3 === myQuestions[i].correctAnswer); 
+            
                 
-    
+    }
             };
 
 
@@ -143,4 +150,5 @@ function reRender() {
 
             };
 
+            
             
