@@ -19,7 +19,7 @@ body {
     text-align: center;
     margin-top: 40px;
     padding-top: 60px;
-
+    font-family: monospace;
     
 }
 .col-lg-3 {
@@ -51,5 +51,31 @@ body {
     color: green;
 }
 #hello {
-    color: ;
+    color: green;
+}
+.finale{
+    text-align: center;
+    margin-top: 40px;
+    padding-top: 60px;
+}
+#finalScore{
+
+    color: rgb(6, 241, 123);
+    font-family: monospace;
+    opacity: 2;
+    
+    
+}
+
+#display {
+    font-family: monospace;
+    color: mediumaquamarine;
+    text-align: center;
+    margin-top: 200px;
+    display: block;
+    padding: 20px;
+}
+
+#corr {
+    color: orange;
 }

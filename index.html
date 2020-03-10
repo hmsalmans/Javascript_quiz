@@ -11,7 +11,7 @@
     <link rel="stylesheet"   type="text/css" href="develop/homework-4.css"> 
 </head>
 <body>
-    <container >
+    <container>
         <div class="row">
             <div class="col-lg-3"> <!-- div for correct and wrong count-->
                 <div id="right"><em>Right</em>:&nbsp;<span id="correct"></span></div>
@@ -30,12 +30,12 @@
                 <div class="row quiz">
                     <div class="col-lg-12">
                         
-                <h3 id="spe"><em>Please click on the right answer.</em></h3>
+                        <h3 id="spe"><em>Please click on the right answer.</em></h3>
                     </div>
                 </div>
                 <div class="row ans quiz">
                     <div class="col-lg-12">
-                        <p id="quest"> <!--div that appears as soon as start is clicked and brings a question with 4 answer choices-->
+                        <p id="quest" > <!--div that appears as soon as start is clicked and brings a question with 4 answer choices-->
                         </p>
                         <div>
                             <button id="ans1" class="btn btn-primary"></button>
@@ -46,16 +46,9 @@
                             <button id="ans4" class="btn btn-primary"></button>
                         </div>
                     </div>    
-                </div>    
-                <br><br>
-                <div class="row quiz">
-                    <div class="col-lg-12">
-                        <div>    
-                        <!--<button class="btn btn-info" id="next">Next</button>-->
-                        </div>    
-                    </div>    
                 </div>  
-            </div>
+                <br><br>
+                </div>
             <div class="col-lg-3">
                 <div class="row">
                     <div class="col-lg-12">
@@ -69,6 +62,11 @@
             </div>
         </div>    
     </container>
+    <div class="finale">  
+        <button class="btn btn-info">Result</button> <br> <br> 
+        <h3 id="finalScore">Click on the result button to see final score</h3>
+        </div>
+        <h1 id="display"><span id="corr"></span>&nbsp; OUT OF 4 ARE CORRECT</h1>
     <script type="text/javascript" src="develop/homework-4.js"></script>
 </body>
 </html>

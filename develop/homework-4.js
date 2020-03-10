@@ -60,7 +60,9 @@ $(document).ready(function() {
 
 
     reRender();
-    
+
+    $("#display").hide();
+    $(".finale").hide();
     $("#hello").hide(); // certain dives are made hidden and show up during the application as needed.
     $("#nobaby").hide();
     $(".quiz").hide(); // hides the div which becomes visible when start button is clicked
@@ -90,13 +92,14 @@ $(document).ready(function() {
 
     };
 
-    
-    
     i++;
 
     if (
         i === myQuestions.length) {
-            clearInterval(myTimer);
+            clearInterval(myTimer);     // when all questions are answered, the timer will stop.
+            $(".quiz").hide();
+            $(".finale").show();
+
         }
 
     reRender();
@@ -111,6 +114,7 @@ $(".start").on("click", function(){
     $("#startdiv").hide() // when clicked start button, this start div is hid and question/answer div is generated
     
        myTimer =  setInterval(starting, 1000);
+     
     
     
 });
@@ -149,6 +153,25 @@ function reRender() {
                 $("#hello").hide();
 
             };
+            
 
             
+
+                 $(".btn-info").on("click", function(){
+                    $("container").hide(); 
+                    $(".finale").hide();
+                    $("#display").show();
+                    $("#corr").text(correct);
+
+
+                 });
+                
+
+                
+
+
+
+
+        
             
+           
