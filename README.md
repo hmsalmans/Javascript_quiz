@@ -1,4 +1,4 @@
-# homework_4-Javascript_quiz
+# Javascript_quiz
 CREATING A JAVASCRIPT QUIZ
                     
                     I developed an application which demonstrates how a quiz can be presented and what criteria can be used.
