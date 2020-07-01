@@ -29,7 +29,7 @@ Only one HTML file is used with blank elements and a dynamic approach is used to
 # Deployed application link :
                
                
-*https://hmsalmans.github.io/homework_4-Javascript_quiz/
+*https://hmsalmans.github.io/Javascript_quiz/
 
 
 
